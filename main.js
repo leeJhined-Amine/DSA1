@@ -4,7 +4,7 @@ function analyzeSentence(sentence) {
     let wordCount = 0;
     let vowelCount = 0;
 
-    // Iterate through each character in the sentence
+    //iterate through each character in the sentence
     for (let i = 0; i < sentence.length; i++) {
         const char = sentence[i];
 
@@ -23,4 +23,19 @@ function analyzeSentence(sentence) {
     //adding 1 to the word count to account for the last word
     wordCount++;
     return { length, wordCount, vowelCount };
+}
+
+function insertionSort(arr) {
+    for (let i = 1; i < arr.length; i++) {
+      let key = arr[i]; 
+  
+      let j = i - 1;
+      while (j >= 0 && arr[j] > key) {
+        arr[j + 1] = arr[j]; 
+        j--;
+      }
+      arr[j + 1] = key; 
+    }
+  
+    return arr;
 }
