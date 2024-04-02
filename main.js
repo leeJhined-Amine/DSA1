@@ -1,4 +1,5 @@
 //1st time working on strings, i usually turn them into arrays, might not be efficent but it works fine :)
+//this code contain the answers for all DSA checkpoint 
 function analyzeSentence(sentence) {
     let length = 0;
     let wordCount = 0;
@@ -73,3 +74,23 @@ function power(base, exponent) {
         return 1 / (base * power(base, -exponent - 1));
     }
 }
+
+function isLeapYear(year) {
+    if (year % 4 === 0) {
+        if (year % 100 === 0) {
+            if (year % 400 === 0) {
+                return true;
+            } 
+            else {
+                return false;
+            }
+        } 
+        else {
+            return true;
+        }
+    } 
+    else {
+        return false;
+    }
+}
+console.log(isLeapYear(2025))
