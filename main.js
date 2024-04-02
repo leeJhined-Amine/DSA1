@@ -39,3 +39,37 @@ function insertionSort(arr) {
   
     return arr;
 }
+
+function factorial(n) {
+    if (n === 0 || n === 1) {
+        return 1;
+    }
+    else {
+        return n * factorial(n - 1);
+    }
+}
+
+const isPalindromeRecursive = (normalizedStr) => {
+    if (normalizedStr.length <= 1) {
+        return true;
+    }
+    if (normalizedStr[0] !== normalizedStr[normalizedStr.length - 1]) {
+        return false;
+    }
+    return isPalindromeRecursive(normalizedStr.slice(1, -1));
+};
+
+function power(base, exponent) {
+    if (exponent === 0) {
+        return 1;
+    }
+    if (exponent === 1) {
+        return base;
+    }
+    if (exponent > 0) {
+        return base * power(base, exponent - 1);
+    }
+    else {
+        return 1 / (base * power(base, -exponent - 1));
+    }
+}
